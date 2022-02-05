@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-require('dotenv').config(); // Habilita variáveis de ambiente
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+require("dotenv").config(); // Habilita variáveis de ambiente
 
 const app = express();
 
@@ -11,5 +11,5 @@ app.use(cors()); // Habilita o CORS
 
 let PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Express started at in ${PORT}`);
+	console.log(`Express started at in ${PORT}`);
 });

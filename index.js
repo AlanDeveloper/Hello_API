@@ -5,6 +5,7 @@ const routes = require("./src/routes");
 require("dotenv").config(); // Habilita variáveis de ambiente
 
 const app = express();
+app.disable('etag'); // Ajusta o HTTP code
 
 app.use(bodyParser.urlencoded({ extended: false })); // Declara qual biblioteca será utilizada para fazer o parsing
 app.use(express.json()); // Transforma solicitações em JSON

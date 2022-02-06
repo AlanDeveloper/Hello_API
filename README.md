@@ -1,6 +1,6 @@
 # Hello_API
 
-
 ````
-> docker-compose up --build hello_api
+> docker-compose build
+> docker-compose up
 ```

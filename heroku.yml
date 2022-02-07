@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: Dockerfile.prod
+release:
+  image: web

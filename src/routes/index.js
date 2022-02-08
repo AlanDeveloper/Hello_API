@@ -1,8 +1,8 @@
 const express = require("express");
-const productRouter = require("./productRouter");
+const productRoutes = require("./productRoutes");
 const routes = express.Router();
 
-routes.use("/product", productRouter);
+routes.use("/product", productRoutes);
 
 // NOT FOUND
 routes.use(function (req, res, next) {

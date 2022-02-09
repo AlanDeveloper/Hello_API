@@ -2,7 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const routes = require("./src/routes");
-require("dotenv").config(); // Habilita variáveis de ambiente
+if (process.env.NODE_ENV === "development") {
+	require("dotenv").config(); // Habilita variáveis de ambiente
+}
 require('./src/config/database');
 
 const app = express();

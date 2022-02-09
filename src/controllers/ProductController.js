@@ -1,11 +1,21 @@
-module.exports = {
-	get: function (req, res, next) {
-		res.status(200);
-		return res.json({ name: "junior" });
-	},
+const ProductModel = require("../models/ProductModel");
 
-	post: function (req, res, next) {
+class ProductController {
+	get = async (req, res, next) => {
+		try {
+			const products = await ProductModel.find();
+
+			res.status(200);
+			return res.json(products);
+		} catch (error) {
+			console.log("Error detected: " + error);
+		}
+	}
+
+	post = (req, res, next) => {
 		res.status(200);
 		return res.json({ name: "juniorrrrr" });
 	}
-};
+}
+
+module.exports = new ProductController;

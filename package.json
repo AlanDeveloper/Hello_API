@@ -1,29 +1,30 @@
 {
-  "name": "hello_api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon --legacy-watch index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlanDeveloper/Hello_API.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlanDeveloper/Hello_API/issues"
-  },
-  "homepage": "https://github.com/AlanDeveloper/Hello_API#readme",
-  "dependencies": {
-    "body-parser": "^1.19.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.2"
-},
-"devDependencies": {
-	"nodemon": "^2.0.15"
-  }
+	"name": "hello_api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon --legacy-watch index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AlanDeveloper/Hello_API.git"
+	},
+	"author": "AlanDeveloper",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AlanDeveloper/Hello_API/issues"
+	},
+	"homepage": "https://github.com/AlanDeveloper/Hello_API#readme",
+	"dependencies": {
+		"body-parser": "^1.19.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.2",
+		"mongoose": "^6.2.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
 }

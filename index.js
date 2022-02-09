@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const routes = require("./src/routes");
 require("dotenv").config(); // Habilita variáveis de ambiente
+require('./src/config/database');
 
 const app = express();
 app.disable("etag"); // Ajusta o HTTP code
@@ -18,7 +19,6 @@ app.use((req, res, next) => {
 }); // Habilita o CORS
 app.use("/", routes);
 
-let PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-	console.log(`Express started at in ${PORT}`);
+app.listen(process.env.SERVER_PORT, () => {
+	console.log(`Express started at in ${process.env.SERVER_PORT}`);
 });

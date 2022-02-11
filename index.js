@@ -21,6 +21,6 @@ app.use((req, res, next) => {
 }); // Habilita o CORS
 app.use("/", routes);
 
-app.listen(process.env.SERVER_PORT, () => {
-	console.log(`Express started at in ${process.env.SERVER_PORT}`);
+app.listen(process.env.PORT || 8080, () => {
+	console.log(`Express started at in ${process.env.PORT || 8080}`);
 });

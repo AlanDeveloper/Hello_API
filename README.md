@@ -3,7 +3,7 @@
 ## Build and run your container with Docker compose
 ```
 > docker-compose build
-> docker-compose up
+> docker-compose up -d
 ```
 
 ## Registry container image on Heroku

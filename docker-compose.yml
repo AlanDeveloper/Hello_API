@@ -8,6 +8,6 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - ${SERVER_PORT}:${SERVER_PORT}
+      - ${PORT}:${PORT}
     volumes:
       - ./src:/app/src # Ajuda a prevenir a não gravação do node_modules

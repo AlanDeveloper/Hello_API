@@ -10,7 +10,8 @@ class CategoryController {
 			res.status(200);
 			return res.json(categories);
 		} catch (error) {
-			console.log("Error detected: " + error);
+			const err = new Error(error);
+			return next(err);
 		}
 	}
 
@@ -23,7 +24,8 @@ class CategoryController {
 			res.status(201);
 			return res.json(category);
 		} catch (error) {
-			console.log("Error detected: " + error);
+			const err = new Error(error);
+			return next(err);
 		}
 	}
 
@@ -33,7 +35,8 @@ class CategoryController {
 
 			res.status(204).end();
 		} catch (error) {
-			console.log("Error detected: " + error);
+			const err = new Error(error);
+			return next(err);
 		}
 	}
 
@@ -43,7 +46,8 @@ class CategoryController {
 
 			res.status(204).end();
 		} catch (error) {
-			console.log("Error detected: " + error);
+			const err = new Error(error);
+			return next(err);
 		}
 	}
 }

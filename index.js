@@ -12,6 +12,7 @@ app.disable("etag"); // Ajusta o HTTP code
 
 app.use(bodyParser.urlencoded({ extended: false })); // Declara qual biblioteca será utilizada para fazer o parsing
 app.use(express.json()); // Transforma solicitações em JSON
+app.use("/", routes);
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Methods", ["GET", "POST", "PUT", "DELETE"]);
@@ -19,7 +20,10 @@ app.use((req, res, next) => {
 	app.use(cors());
 	next();
 }); // Habilita o CORS
-app.use("/", routes);
+app.use((error, req, res, next) => {
+	res.status(error.status || 500);
+	return res.json({ error: { message: error.message }});
+});
 
 app.listen(process.env.PORT || 8080, () => {
 	console.log(`Express started at in ${process.env.PORT || 8080}`);

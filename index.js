@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 app.use((error, req, res, next) => {
 	res.status(error.status || 500);
 	return res.json({ error: { message: error.message }});
-});
+}); // Tratamento de erros
 
 app.listen(process.env.PORT || 8080, () => {
 	console.log(`Express started at in ${process.env.PORT || 8080}`);

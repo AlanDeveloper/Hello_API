@@ -24,7 +24,7 @@
 ```
 
 Recursos disponíveis para acesso via API:
-* [Categorias](#categorias)
+* [Categorias](#categorias-category)
 
 ### Métodos
 Requisições para a API devem seguir os padrões:
@@ -75,7 +75,6 @@ Requisições para a API devem seguir os padrões:
 			}
 		]
 		```
-<br>
 ### Ler [GET /category/:id]
 - Request 
 	- Headers
@@ -91,7 +90,6 @@ Requisições para a API devem seguir os padrões:
 			"__v": 0
 		}
 		```
-<br>
 ### Criar [POST /category]
 - Request 
 	- Headers
@@ -113,7 +111,6 @@ Requisições para a API devem seguir os padrões:
 			"__v": 0
 		}
 		```
-<br>
 ### Atualizar [PUT /category/:id]
 - Request 
 	- Headers
@@ -131,7 +128,6 @@ Requisições para a API devem seguir os padrões:
 		```
 		Sem corpo
 		```
-<br>
 ### Deletar [DELETE /category/:id]
 - Request 
 	- Headers

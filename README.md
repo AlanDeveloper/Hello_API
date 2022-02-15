@@ -1,4 +1,6 @@
 # Hello_API
+Este repositório tem como objetivo ilustrar uma API simples em Node.js e MongoDB, usando Express.js, e construir uma imagem do Docker.
+
 
 Recursos disponíveis para acesso via API:
 * [Categorias](#categorias-category)
@@ -68,6 +70,8 @@ Respostas da API seguem os padrões:
 </table>
 
 # Categorias [/category]
+Aqui você encontrada as rotas para essa tópico.
+
 <table>
 	<thead>
 		<tr>

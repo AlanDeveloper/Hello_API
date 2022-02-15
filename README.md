@@ -69,84 +69,38 @@ Respostas da API seguem os padrões:
 
 # Categorias [/category]
 
-### Listar [GET /category]
-- Request 
-	- Headers
-		```
-		Content-Type: application/json
-		```
-- Response
-	- Body
-		```
-		[
-			{
-				"_id": "62092382f17e1d285e85386a",
-				"name": "Eletrodoméstico",
-				"__v": 0
-			}
-		]
-		```
-### Ler [GET /category/:id]
-- Request 
-	- Headers
-		```
-		Content-Type: application/json
-		```
-- Response
-	-	Body
-		```
-		{
-			"_id": "62092382f17e1d285e85386a",
-			"name": "Eletrodoméstico",
-			"__v": 0
-		}
-		```
-### Criar [POST /category]
-- Request 
-	- Headers
-		```
-		Content-Type: application/json
-		```
-	-	Body
-		```
-		{
-			"name": "Livro"
-		}
-		```
-- Response
-	- Body
-		```
-		{
-			"_id": "12032452fj7ekd28le85386b",
-			"name": "Livro",
-			"__v": 0
-		}
-		```
-### Atualizar [PUT /category/:id]
-- Request 
-	- Headers
-		```
-		Content-Type: application/json
-		```
-	- Body
-		```
-		{
-			"name": "Computador",
-		}
-		```
-- Response
-	- Body
-		```
-		Sem corpo
-		```
-### Deletar [DELETE /category/:id]
-- Request 
-	- Headers
-		```
-		Content-Type: application/json
-		```
-- Response
-	- Body
-		```
-		Sem corpo
-		```
+<div style="display: flex; flex-direction: row; background-color: #55a532; padding: 5px; border-radius: 10px; color: white; justify-content: space-between; align-items: center;">
+	<p style="flex: 1; margin: 0; margin-left: 20px; font-weight: bold;">GET</p>
+	<p style="flex: 1; margin: 0;">/category</p>
+	<div style="flex: 1; background-color: white; padding: 5px 10px; border-radius: 5px; color: green">
+		<p style="margin: 0;">Lista todas as categorias</p>
+	</div>
+</div>
+<div style="display: flex; flex-direction: row; background-color: #55a532; padding: 5px; border-radius: 10px; color: white; justify-content: space-between; align-items: center; margin-top: 10px">
+	<p style="flex: 1; margin: 0; margin-left: 20px; font-weight: bold;">GET</p>
+	<p style="flex: 1; margin: 0;">/category/:id</p>
+	<div style="flex: 1; background-color: white; padding: 5px 10px; border-radius: 5px; color: green">
+		<p style="margin: 0;">Lista uma categoria</p>
+	</div>
+</div>
+<div style="display: flex; flex-direction: row; background-color: #f9b944; padding: 5px; border-radius: 10px; color: white; justify-content: space-between; align-items: center; margin-top: 10px">
+	<p style="flex: 1; margin: 0; margin-left: 20px; font-weight: bold;">POST</p>
+	<p style="flex: 1; margin: 0;">/category</p>
+	<div style="flex: 1; background-color: white; padding: 5px 10px; border-radius: 5px; color: orange">
+		<p style="margin: 0;">Cria uma nova categoria</p>
+	</div>
+</div>
+<div style="display: flex; flex-direction: row; background-color: #3554b1; padding: 5px; border-radius: 10px; color: white; justify-content: space-between; align-items: center; margin-top: 10px">
+	<p style="flex: 1; margin: 0; margin-left: 20px; font-weight: bold;">PUT</p>
+	<p style="flex: 1; margin: 0;">/category/:id</p>
+	<div style="flex: 1; background-color: white; padding: 5px 10px; border-radius: 5px; color: blue">
+		<p style="margin: 0;">Atualiza uma categoria</p>
+	</div>
+</div>
+<div style="display: flex; flex-direction: row; background-color: #ff4141; padding: 5px; border-radius: 10px; color: white; justify-content: space-between; align-items: center; margin-top: 10px">
+	<p style="flex: 1; margin: 0; margin-left: 20px; font-weight: bold;">DELETE</p>
+	<p style="flex: 1; margin: 0;">/category/:id</p>
+	<div style="flex: 1; background-color: white; padding: 5px 10px; border-radius: 5px; color: red">
+		<p style="margin: 0;">Deleta uma categoria</p>
+	</div>
+</div>

@@ -1,28 +1,5 @@
 # Hello_API
 
-## Build and run your container with Docker compose
-```
-> docker-compose build
-> docker-compose up -d
-```
-
-## Registry container image on Heroku
-```
-> docker login
-> heroku container:login
-> heroku git:remote -a example-app
-> heroku container:push web
-> heroku container:release web
-```
-
-## Deploy with heroku.yml
-```
-> git add heroku.yml
-> git commit -m "Add heroku.yml"
-> heroku stack:set container
-> git push heroku your-branch
-```
-
 Recursos disponíveis para acesso via API:
 * [Categorias](#categorias-category)
 
@@ -52,6 +29,40 @@ Requisições para a API devem seguir os padrões:
 		<tr>
 			<td>DELETE</td>
 			<td>Remove um registro do sistema.</td>
+		</tr>
+	</tbody>
+</table>
+
+### Respostas
+Respostas da API seguem os padrões:
+
+<table>
+	<thead>
+		<tr>
+			<th>Código</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>200</td>
+			<td>A requisição foi bem sucedida.</td>
+		</tr>
+		<tr>
+			<td>201</td>
+			<td>A requisição foi bem sucedida e um novo recurso foi criado como resultado.</td>
+		</tr>
+		<tr>
+			<td>204</td>
+			<td>A requisição foi bem sucedida e não há conteúdo de resposta.</td>
+		</tr>
+		<tr>
+			<td>404</td>
+			<td>O servidor não pode encontrar o recurso solicitado.</td>
+		</tr>
+		<tr>
+			<td>500</td>
+			<td>O servidor encontrou uma situação com a qual não sabe lidar.</td>
 		</tr>
 	</tbody>
 </table>

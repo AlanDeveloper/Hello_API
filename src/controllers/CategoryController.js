@@ -17,9 +17,7 @@ class CategoryController {
 
 	post = async (req, res, next) => {
 		try {
-			const category = await new CategoryModel({
-				name: req.body.name
-			}).save();
+			const category = await new CategoryModel(req.body).save();
 
 			res.status(201);
 			return res.json(category);
@@ -30,8 +28,9 @@ class CategoryController {
 	}
 
 	put = async (req, res, next) => {
+		let id = req.params.id;
 		try {
-			await CategoryModel.findOneAndUpdate({ _id: new mongoose.Types.ObjectId(req.params.id) }, { name: req.body.name });
+			await CategoryModel.findOneAndUpdate({ _id: new mongoose.Types.ObjectId(id) }, req.body);
 
 			res.status(204).end();
 		} catch (error) {
@@ -41,8 +40,9 @@ class CategoryController {
 	}
 
 	delete = async (req, res, next) => {
+		let id = req.params.id;
 		try {
-			await CategoryModel.deleteOne({ _id: new mongoose.Types.ObjectId(req.params.id) });
+			await CategoryModel.deleteOne({ _id: new mongoose.Types.ObjectId(id) });
 
 			res.status(204).end();
 		} catch (error) {

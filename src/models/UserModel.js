@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
 	cpf: {
 		type: String,
+		unique: true,
 		minLength: 14,
 		maxlength: 14,
 		required: true

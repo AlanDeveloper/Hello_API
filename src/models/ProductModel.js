@@ -25,7 +25,12 @@ const productSchema = new mongoose.Schema({
 	},
 	fk_category_id: {
 		type: mongoose.Schema.Types.ObjectId,
-		ref: 'Category',
+		ref: "Category",
+		required: true
+	},
+	fk_user_id: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "User",
 		required: true
 	}
 });

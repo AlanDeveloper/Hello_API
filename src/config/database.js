@@ -8,5 +8,5 @@ mongoose.connect(
 	}
 );
 
-mongoose.connection.on('error', () => console.error('connection error:'));
-mongoose.connection.once('open', () => console.log('database connected'));
+mongoose.connection.on("error", () => console.error("connection error:"));
+mongoose.connection.once("open", () => console.log("database connected"));

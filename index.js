@@ -5,7 +5,7 @@ const routes = require("./src/routes");
 if (process.env.NODE_ENV === "development") {
 	require("dotenv").config(); // Habilita variáveis de ambiente
 }
-require('./src/config/database');
+require("./src/config/database");
 
 const app = express();
 app.disable("etag"); // Ajusta o HTTP code

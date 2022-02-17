@@ -4,6 +4,9 @@ Este repositório tem como objetivo ilustrar uma API simples em Node.js e MongoD
 
 Recursos disponíveis para acesso via API:
 * [Categorias](#categorias-category)
+* [Produtos](#produtos-product)
+* [Usuários](#usuários-user)
+* [Compras](#compras-purchase)
 
 ## Métodos
 Requisições para a API devem seguir os padrões:
@@ -105,6 +108,121 @@ Aqui você encontrada as rotas para essa tópico.
 			<td>/category/:id</td>
 			<td>DELETE</td>
 			<td>Deleta uma categoria.</td>
+		</tr>
+	</tbody>
+</table>
+
+# Produtos [/product]
+Aqui você encontrada as rotas para essa tópico.
+
+<table>
+	<thead>
+		<tr>
+			<th>URL</th>
+			<th>Método</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>/product</td>
+			<td>GET</td>
+			<td>Lista todos os produtos.</td>
+		</tr>
+		<tr>
+			<td>/product/:id</td>
+			<td>GET</td>
+			<td>Lista um produto.</td>
+		</tr>
+		<tr>
+			<td>/product</td>
+			<td>POST</td>
+			<td>Cria um novo produto.</td>
+		</tr>
+		<tr>
+			<td>/product/:id</td>
+			<td>PUT</td>
+			<td>Atualiza um produto.</td>
+		</tr>
+		<tr>
+			<td>/product/:id</td>
+			<td>DELETE</td>
+			<td>Deleta um produto.</td>
+		</tr>
+	</tbody>
+</table>
+
+# Usuários [/user]
+Aqui você encontrada as rotas para essa tópico.
+
+<table>
+	<thead>
+		<tr>
+			<th>URL</th>
+			<th>Método</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>/user</td>
+			<td>GET</td>
+			<td>Lista todos os usuários.</td>
+		</tr>
+		<tr>
+			<td>/user/:id</td>
+			<td>GET</td>
+			<td>Lista um usuário.</td>
+		</tr>
+		<tr>
+			<td>/user</td>
+			<td>POST</td>
+			<td>Cria um novo usuário.</td>
+		</tr>
+		<tr>
+			<td>/user/:id</td>
+			<td>PUT</td>
+			<td>Atualiza um usuário.</td>
+		</tr>
+		<tr>
+			<td>/user/:id</td>
+			<td>DELETE</td>
+			<td>Deleta um usuário.</td>
+		</tr>
+	</tbody>
+</table>
+
+# Compras [/purchase]
+Aqui você encontrada as rotas para essa tópico.
+
+<table>
+	<thead>
+		<tr>
+			<th>URL</th>
+			<th>Método</th>
+			<th>Descrição</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>/purchase</td>
+			<td>GET</td>
+			<td>Lista todas as compras.</td>
+		</tr>
+		<tr>
+			<td>/purchase/:id</td>
+			<td>GET</td>
+			<td>Lista uma compra.</td>
+		</tr>
+		<tr>
+			<td>/purchase</td>
+			<td>POST</td>
+			<td>Cria uma nova compra.</td>
+		</tr>
+		<tr>
+			<td>/purchase/:id</td>
+			<td>DELETE</td>
+			<td>Deleta uma compra.</td>
 		</tr>
 	</tbody>
 </table>

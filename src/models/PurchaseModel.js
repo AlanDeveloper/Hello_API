@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const purchaseSchema = new mongoose.Schema({
 	amount: {
 		type: Number,
+		min: 0,
 		required: true
 	},
 	price: {

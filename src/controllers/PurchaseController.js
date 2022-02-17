@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const ProductModel = require("../models/ProductModel");
 const PurchaseModel = require("../models/PurchaseModel");
 
 class PurchaseController {
@@ -16,8 +17,17 @@ class PurchaseController {
 	}
 
 	post = async (req, res, next) => {
+		let product = await ProductModel.findById(req.body.fk_product_id);
+		if (product.amount >= req.body.amount) {
+			product.amount = product.amount - req.body.amount;
+		} else {
+			const err = new Error("This product doesn't have that much");
+			return next(err);
+		}
+		
 		try {
 			const purchase = await new PurchaseModel(req.body).save();
+			product.save();
 
 			res.status(201);
 			return res.json(purchase);

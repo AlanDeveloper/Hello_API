@@ -1,6 +1,8 @@
 # Hello_API
 Este repositório tem como objetivo ilustrar uma API simples em Node.js e MongoDB, usando Express.js, e construir uma imagem do Docker.
 
+Link para API: https://hello----api.herokuapp.com
+
 
 Recursos disponíveis para acesso via API:
 * [Categorias](#categorias-category)

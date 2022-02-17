@@ -27,7 +27,7 @@ class PurchaseController {
 		
 		try {
 			const purchase = await new PurchaseModel(req.body).save();
-			product.save();
+			await product.save();
 
 			res.status(201);
 			return res.json(purchase);
